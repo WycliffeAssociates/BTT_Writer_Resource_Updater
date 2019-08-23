@@ -1,0 +1,24 @@
+{
+  "name": "btt_writer_resource_updater",
+  "version": "1.0.0",
+  "description": "script to create an updated resource_containers folder for BTT Writer",
+  "main": "index.js",
+  "dependencies": {
+    "door43-client": "^0.9.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "index": "door43-client index -u https://api.bibletranslationtools.org/v2/ts/catalog.json",
+    "download": "door43-client download"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WycliffeAssociates/BTT_Writer_Resource_Updater.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WycliffeAssociates/BTT_Writer_Resource_Updater/issues"
+  },
+  "homepage": "https://github.com/WycliffeAssociates/BTT_Writer_Resource_Updater#readme"
+}
