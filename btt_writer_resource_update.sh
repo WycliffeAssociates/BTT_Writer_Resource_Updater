@@ -11,4 +11,4 @@ mv containers.zip ../
 mv containers-en.zip ../
 cd ..
 zip -r resource_containers.zip resource_containers/ index.sqlite
-
+docker run --rm -it -u $(id -u ${USER}):$(id -g ${USER}) -v $(pwd):/workspace keinos/sqlite3 sqlite3 /workspace/index.sqlite "PRAGMA user_version = 1;"
