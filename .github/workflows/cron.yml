@@ -17,9 +17,6 @@ jobs:
         run: |
           chmod +x btt_writer_resource_update.sh
           ./btt_writer_resource_update.sh
-      - name: move files
-        run: |
-          mv 
       - name: Load secret
         uses: 1password/load-secrets-action@v1
         with:
