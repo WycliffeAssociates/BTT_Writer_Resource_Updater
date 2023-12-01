@@ -17,6 +17,11 @@ jobs:
         run: |
           chmod +x btt_writer_resource_update.sh
           ./btt_writer_resource_update.sh
+          mkdir out
+          mv ./index.sqlite ./out/
+          mv ./resource_containers.zip ./out/
+          mv ./containers.zip ./out/
+          mv ./containers-en.zip ./out/
       - name: Load secret
         uses: 1password/load-secrets-action@v1
         with:
@@ -33,7 +38,7 @@ jobs:
           aws_key_id: ${{ env.AWS_KEY_ID }}
           aws_secret_access_key: ${{ env.AWS_SECRET_ACCESS_KEY}}
           aws_bucket: writer-resources
-          source_dir: 'index.sqlite'
+          source_dir: './out'
           destination_dir: ''
           endpoint: ${{ env.ENDPOINT }}
       
