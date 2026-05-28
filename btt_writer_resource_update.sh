@@ -4,6 +4,7 @@ docker run --rm \
   -u $(id -u ${USER}):$(id -g ${USER}) \
   -v $(pwd):/workspace \
   -w /workspace \
+  -e HOME=/workspace \
   node:lts \
   bash -c "npm install && npm run index && npm run download"
 
