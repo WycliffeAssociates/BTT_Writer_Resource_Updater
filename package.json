@@ -1,10 +1,10 @@
 {
   "name": "btt_writer_resource_updater",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "script to create an updated resource_containers folder for BTT Writer",
   "main": "index.js",
   "dependencies": {
-    "door43-client": "^0.9.7"
+    "door43-client-fork": "0.9.11"
   },
   "devDependencies": {},
   "scripts": {
