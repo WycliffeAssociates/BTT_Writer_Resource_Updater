@@ -1,8 +1,12 @@
 #!/bin/bash
 
-npm install
-npm run index
-npm run download
+docker run --rm \
+  -u $(id -u ${USER}):$(id -g ${USER}) \
+  -v $(pwd):/workspace \
+  -w /workspace \
+  node:lts \
+  bash -c "npm install && npm run index && npm run download"
+
 cd resource_containers
 for i in */; do (cd "$i" ; tar -cjvf "${i%/}.tsrc" * ; mv "${i%/}.tsrc" ../ ; cd .. ; rm -rf "$i"); done
 zip -r containers.zip *
